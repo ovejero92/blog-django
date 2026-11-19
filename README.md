@@ -1,0 +1,1 @@
+Arrancando a preparar nuestro proyecto con django
