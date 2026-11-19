@@ -1,1 +1,2 @@
-Arrancando a preparar nuestro proyecto con django
+Proyecto base de un blog web desarrollado con django
+
