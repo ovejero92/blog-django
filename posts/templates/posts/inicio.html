@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Mi Blog</title>
-</head>
-<body>
-    <h1>Bienvenidos a mi blog</h1>
-    
-    <p>Este es el inicio del proyecto</p>
-</body>
-</html>
+{% extends "posts/base.html" %}
+
+{% block title %} INICIO | Mi blog {% endblock %}
+
+{% block content %}
+  <h2>Bienvenido a mi blog</h2>
+  <p>Este es el inicio del proyecto.</p>
+{% endblock %}
