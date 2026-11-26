@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Posts | Mi Blog</title>
+</head>
+<body>
+  <h1>Listado de posts</h1>
+  <ul>
+    {% for post in posts %}
+      <li>{{ post.titulo }} - {{ post.autor }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
