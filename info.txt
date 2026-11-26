@@ -1,0 +1,8 @@
+{# sirve para la logica (for , condiciones, extends, loads, urls) #}
+  {%  %}
+
+  {# Mostrar un valor #}
+  {{  }}
+
+  {# transformar un valor antes de mostrarlo #}
+  {{ x|filtro }} 

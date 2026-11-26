@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from datetime import date
+from django.http import Http404
 # from django.http import HttpResponse
 
 POSTS = [
@@ -16,3 +17,20 @@ def inicio(request):
 def listar_posts(request):
 
     return render(request, "posts/lista_posts.html", {"posts": POSTS})
+
+def detalle_post(request, post_id):
+    for post in POSTS:
+        if post["id"] == post_id:
+            return render(request, "posts/detalle_post.html", {"post": post})
+    raise Http404("El post no exite")
+
+def contacto(request):
+    return render(request, "posts/contacto.html")
+
+def acerca_de(request):
+    autor = {
+        "nombre":"Gus",
+        "bio":"Desarrollador python ",
+        "especialidad":"Django"
+    }
+    return render(request,"posts/acerca_de.html",{"autor":autor})

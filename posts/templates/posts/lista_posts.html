@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Posts | Mi Blog</title>
-</head>
-<body>
-  <h1>Listado de posts</h1>
-  <ul>
-    {% for post in posts %}
-      <li>{{ post.titulo }} - {{ post.autor }}</li>
-    {% endfor %}
-  </ul>
-</body>
-</html>
+<h1>Listado de posts</h1>
+<ul>
+  {% for post in posts %}
+    <li>
+      {{ forloop.counter }}.
+      <a href="{% url 'detalle_post' post.id %}">{{ post.titulo|upper }}</a>
+      - {{ post.autor }} - {{ post.fecha | date:"d/m/Y" }}
+      {% if not post.publicado %}<em>(borrador)</em>{% endif %}
+    </li>
+  {% empty %}
+    <li>Todavía no hay posts.</li>
+  {% endfor %}
+</ul>
